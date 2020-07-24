@@ -1,0 +1,102 @@
+require("dotenv").config();
+const path = require("path");
+const express = require("express");
+const bodyParser = require("body-parser");
+const session = require("express-session");
+const fetch = require("node-fetch");
+const request = require("request");
+const { stringify } = require("querystring");
+const csrf = require("csurf");
+
+const nodemailer = require("nodemailer");
+
+const app = express();
+const csrfProtection = csrf();
+
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, "public")));
+app.use(
+  session({
+    secret: process.env.MY_SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+app.use(csrfProtection);
+
+app.get("/", (req, res) => {
+  res.render("contact", {
+    csrfToken: req.csrfToken(),
+  });
+});
+
+app.post("/contact", async (req, res) => {
+  if (!req.body.captcha) {
+    return res.json({ success: false, msg: "Please select captcha" });
+  }
+
+  const secretKey = process.env.G_SECRET_KEY;
+
+  const query = stringify({
+    secret: secretKey,
+    response: req.body.captcha,
+    remoteip: req.connection.remoteAddress,
+  });
+
+  const verifyURL = `https://google.com/recaptcha/api/siteverify?${query}`;
+
+  const body = await fetch(verifyURL).then((res) => res.json());
+
+  if (body.success !== undefined && !body.success) {
+    return res.json({ success: false, msg: "Failed captcha verification" });
+  }
+
+  const name = req.body.name;
+  const email = req.body.email;
+  const message = req.body.message;
+
+  const output = `
+    <h1>Message from ${name}</h1>
+    <h2>Email from ${email}</h2>
+    <h3>Message content: ${message}</h3>
+  `;
+
+  let transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST,
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  transporter
+    .sendMail({
+      from: "<eddie@eddiecleary.com>",
+      to: "eddie@eddiecleary.com",
+      subject: "New Form|eddiecleary.com",
+      html: output,
+    })
+    .then((result) => {
+      return res.json({
+        success: true,
+        message: "Success!",
+      });
+    })
+    .catch((err) => {
+      return res.json({
+        success: false,
+        message: "Unsuccessful!",
+      });
+    });
+});
+
+app.listen(3000, () => {
+  console.log("Server started.");
+});
