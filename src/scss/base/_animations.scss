@@ -1,0 +1,9 @@
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  7% { transform: rotate(-8deg);}
+ 14% { transform: rotate(8deg); }
+ 21% { transform: rotate(-8deg); }
+ 28% { transform: rotate(8deg); }
+ 35% { transform: rotate(0deg); }
+ 100% { transform: rotate(0deg); }
+}

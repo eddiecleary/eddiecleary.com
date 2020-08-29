@@ -1,0 +1,45 @@
+{
+  "name": "eddiecleary",
+  "version": "1.0.0",
+  "description": "Portfolio Website for Eddie Cleary | Freelance Web Developer",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run watch-code & npm run watch-css",
+    "watch-code": "nodemon app.js",
+    "watch-css": "nodemon -e scss -x \"npm run build-css nodemon app.js\"",
+    "build-css": "node-sass --include-path scss src/scss/main.scss public/css/main.css",
+    "browser-sync": "browser-sync reload --url 'https://localhost:3000' --files=\"*.css\""
+  },
+  "author": "Eddie Cleary",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "csurf": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "gulp-ejs": "^5.1.0",
+    "helmet": "^4.1.0",
+    "node-fetch": "^2.6.0",
+    "nodemailer": "^6.4.10",
+    "querystring": "^0.2.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svg-symbols": "^3.2.3",
+    "imagemin-gifsicle": "^7.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+@mixin tshadow {
+    text-shadow: 0 0 10px $primary;
+}
+
+@mixin btn {
+  text-align: center;
+  display: block;
+  padding: 0.9em 1.8em;
+  background-color: $secondary;
+  border-radius: 8px;
+  color: $black;
+  font-weight: bold;
+  margin: 0 auto;
+  border: 1.5px solid $secondary;
+
+  &:hover {
+    background-color: darken($secondary, 5%);
+  }
+}

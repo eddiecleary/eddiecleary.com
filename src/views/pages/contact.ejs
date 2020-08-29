@@ -1,0 +1,64 @@
+<%- include('../includes/head') %>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="/js/emailForm.js" defer></script>
+</head>
+
+<body>
+    <%- include('../includes/svg') %>
+    <%- include('../includes/header'); %>
+
+    <main>
+
+      <section class="about">
+        <div class="container">
+          <figure>
+            <picture>
+              <img src="/images/eddiecleary.jpg" alt="">
+            </picture>
+            <figcaption>Eddie Cleary is a freelance designer who helps authors share their stories with the world.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="contact-form">
+        <div class="container">
+          <div class="heading">
+            <h3><span class="highlight">Contact</span> Me Today</h3>
+            <svg viewbox="0 0 571 32"><use xlink:href="#icon-squiggly"></use></svg>
+          </div>
+          <form class="form" action="/contact" method="post" id="emailForm">
+            <div class="field field-50">
+              <label for="name">Name: </label>
+              <input type="text" id="name" name="name" value="">
+            </div>
+            <div class="field field-50">
+              <label for="email">Email: </label>
+              <input type="email" id="email" name="email" value="">
+            </div>
+            <div class="field field-100">
+              <label for="message">Message:</label>
+              <textarea name="message" id="message"></textarea>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LfpZrUZAAAAAPCyPkdtd4es1c6XgDoxttAetTzd" id="captcha"></div>
+            <br/>
+            <input type="hidden" id="csrf" name="_csrf" value="<%= csrfToken %>">
+            <button type="submit" id="emailBtn"><span id="btnText">Send Message!</span><object type="image/svg+xml" id="spinner" data="/images/spinner.svg"></object></button>
+          </form>
+        </div>
+      </section>
+
+      <section class="booking">
+        <div class="container">
+          <span class="or">&dash; or &dash;</span>
+          <div class="heading">
+            <h1>Schedule A <br><span class="highlight">Free Consultation!</span></h1>
+            <svg viewbox="0 0 571 32"><use xlink:href="#icon-squiggly"></use></svg>
+          </div>
+          <div class="calendly-inline-widget" data-url="https://calendly.com/eddiecleary/free-consultation"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        </div>
+      </section>
+
+    </main>
+
+<%- include('../includes/footer.ejs') %>

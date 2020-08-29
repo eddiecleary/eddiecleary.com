@@ -1,0 +1,45 @@
+<header class="header <%= path === '/' ? 'index' : '' %>" id="header">
+  <div class="container">
+    <a href="/" class="logo-wrap">
+      <svg class="logo" viewbox="0 0 300 150">
+        <use xlink:href="#icon-logo_white"></use>
+      </svg>
+    </a>
+    <nav class="nav" id="nav">
+      <ul>
+        <li>
+          <a href="/">
+            <svg viewbox="0 0 32 32">
+              <use xlink:href="#icon-home"></use>
+            </svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <% if (path !== '/contact') { %>
+        <li>
+          <a href="/contact">
+            <svg viewbox="0 0 32 32">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+            <span>Contact</span>
+          </a>
+        </li>
+        <% } %>
+      </ul>
+      <button
+        class="hamburger"
+        id="navBtn"
+        type="button"
+        aria-controls="navCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <span class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+

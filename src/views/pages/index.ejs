@@ -1,0 +1,176 @@
+<%- include('../includes/head') %>
+<script src="/js/home.js" defer></script>
+</head>
+
+<body>
+    <%- include('../includes/svg') %>
+    <%- include('../includes/header'); %>
+
+    <main>
+
+        <section class="hero">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="/images/hero-xxxl@3x.jpg 3838w, /images/hero-xxxl@2x.jpg 2560w, /images/hero-xxxl@1x.jpg 1920w">
+            <source media="(min-width: 992px)" srcset="/images/hero-lg.jpg">
+            <source media="(min-width: 768px)" srcset="/images/hero-tab.jpg">
+            <img srcset="/images/hero.jpg" alt="Female author holding a book and smiling">
+          </picture>
+          <div class="container">
+            <div class="hero-wrap">
+              <h1>Get Your <span class="highlight"><em>Custom-Designed</em></span> Author Website</h1>
+              <a class="btn btn-outline" href="javascript: scrollToExamples();">View Examples</a>
+              <a class="btn" href="/contact">Schedule A Free Consultation</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="examples">
+          <div class="container">
+            <article id="example-card">
+              <a href="#" class="overlay"></a>
+              <picture>
+                  <img class="skinny" srcset="/images/singlepage.png" alt="Zoomed out version of a single page website showing the entire home page">
+              </picture>
+              <h3>
+                  Basic <span class="highlight">Single Page</span>
+              </h3>
+              <ul>
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Cost effective
+                  </li>
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Easy to scroll and view
+                  </li>
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Great for simple websites
+                  </li>
+                  <li>
+                    <a href="#" class="btn">View Live Example</a>
+                  </li>
+              </ul>
+            </article>
+            <article id="example-card">
+              <a href="#" class="overlay"></a>
+              <picture>
+                  <img srcset="/images/multipage.png"  id="examples" alt="Zoomed out version of a multi page website showing 3 pages of the website">
+              </picture>
+              <h3>
+                  Standard <span class="highlight">Multi Page</span>
+              </h3>
+              <ul class="examples__card__list">
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Each page has a purpose
+                  </li>
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Traditional website layout
+                  </li>
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Great for search engines
+                  </li>
+                  <li>
+                    <a href="#" class="btn">View Live Example</a>
+                  </li>
+              </ul>
+            </article>
+            <article id="example-card">
+              <a href="#" class="overlay"></a>
+              <picture>
+                  <img srcset="/images/blog.png" alt="Zoomed out version of a blog website showing 3 pages of the website">
+              </picture>
+              <h3>
+                  Premium <span class="highlight">Blog</span>
+              </h3>
+              <ul class="examples__card__list">
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Write blog articles
+                  </li>
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Promote on Amazon store
+                  </li>
+                  <li>
+                      <svg viewbox="0 0 32 32"><use xlink:href="#icon-check"></use></svg> Engage your readers
+                  </li>
+                  <li>
+                    <a href="#" class="btn">View Live Example</a>
+                  </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="steps">
+          <div class="container">
+            <div class="heading">
+                <h3>Easy <span class="highlight">3-Step Process</span></h3>
+                <svg viewbox="0 0 571 32"><use xlink:href="#icon-squiggly"></use></svg>
+            </div>
+            <ol>
+                <li>
+                    <span class="num">1</span>
+                    <h6><span class="highlight">Free</span> Consultation</h6>
+                </li>
+                <li>
+                    <span class="num">2</span>
+                    <h6><span class="highlight">Approve</span> The Design</h6>
+                </li>
+                <li>
+                    <span class="num">3</span>
+                    <h6><span class="highlight">Launch</span> Your Website!</h6>
+                </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <div class="heading">
+                    <h2>Experience The
+                      <span class="highlight">Benefits</span>
+                    </h2>
+                    <svg viewbox="0 0 571 32"><use xlink:href="#icon-squiggly"></use></svg>  
+                </div>
+                <ul>
+                    <li>
+                        <svg viewbox="0 0 32 32"><use xlink:href="#icon-search"></use></svg> <p class="benefits__list__item__heading">Get found on search engines</p>
+                    </li>
+                    <li>
+                        <svg viewbox="0 0 32 32"><use xlink:href="#icon-mail"></use></svg> <p class="benefits__list__item__heading">Gather an e-mail list of readers</p>
+                    </li>
+                    <li>
+                        <svg viewbox="0 0 32 32"><use xlink:href="#icon-chat"></use></svg> <p class="benefits__list__item__heading">Allow readers to message you</p>
+                    </li>
+                    <li>
+                        <svg viewbox="0 0 32 32"><use xlink:href="#icon-money"></use></svg> <p class="benefits__list__item__heading">Link to your sales page</p>
+                    </li>
+                    <li>
+                        <svg viewbox="0 0 32 32"><use xlink:href="#icon-pencil"></use></svg> <p class="benefits__list__item__heading">Create your own blog articles</p>
+                    </li>
+                    <li>
+                        <svg viewbox="0 0 32 32"><use xlink:href="#icon-like"></use></svg> <p class="benefits__list__item__heading">Promote your social media accounts</p>
+                    </li>
+                    <li>
+                        <svg viewbox="0 0 32 32"><use xlink:href="#icon-image"></use></svg> <p class="benefits__list__item__heading">Display cover art & illustrations</p>
+                    </li>
+                    <li>
+                        <svg viewbox="0 0 32 32"><use xlink:href="#icon-book"></use></svg> <p class="benefits__list__item__heading">Introduce readers to your books</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cta">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="/images/cta-xxxl@3x.jpg 3838w, /images/cta-xxxl@2x.jpg 2560w, /images/cta-xxxl@1x.jpg 1920w">
+                <source media="(min-width: 992px)" srcset="/images/cta-tab.jpg">
+                <source media="(min-width: 480px)" srcset="/images/cta-md.jpg">
+                <img src="/images/cta.jpg" alt="Female author holding a pair of glasses and smiling">
+            </picture>
+            <div class="container">
+                <div class="wrapper">
+                  <h3>You Wrote The Book,<br><span class="highlight"><em>Now Share It With The World!</em></span></h3>
+                  <a href="/contact" class="btn">Call Us Today!<svg viewbox="0 0 32 32"><use xlink:href="#icon-phone"></use></svg></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include('../includes/footer.ejs') %>

@@ -1,0 +1,52 @@
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 0.9em 1.8em;
+    background-color: $secondary;
+    border-radius: 8px;
+    color: $black;
+    font-weight: bold;
+    border: 1.5px solid $secondary;
+  
+    &:hover {
+      background-color: darken($secondary, 5%);
+      border-color: darken($secondary, 5%);
+    }
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    color: $white;
+    border: 1.5px solid $white;
+    transition: all 0.35s ease;
+  
+    &:hover {
+      background-color: $white;
+      color: $black;
+      border-color: $white;
+    }
+  }
+
+  .btn-outline.yellow {
+    border-color: $secondary;
+
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+
+.scrollBtn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 40px;
+  left: 35px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s ease;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
