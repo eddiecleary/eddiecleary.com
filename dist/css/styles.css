@@ -859,8 +859,9 @@ section.examples .container article {
 
 @media (min-width: 992px) {
   section.examples .container article:hover {
-    border: 3px solid #2200b8;
+    border: 3px solid #ffd700;
     scale: 1.05;
+    z-index: 5;
   }
   section.examples .container article:hover li:last-of-type {
     opacity: 1;
