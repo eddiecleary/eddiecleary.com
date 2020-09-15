@@ -4,7 +4,7 @@ const year = document.getElementById('year');
 const scrollBtn = document.getElementById('scrollBtn');
 const rootElement = document.documentElement;
 const examplesBtn = document.getElementById('examplesBtn');
-const examples = document.getElementById('examplesDD');
+const examples = document.getElementById('examples');
 
 navBtn.addEventListener("click", toggleNav);
 scrollBtn.addEventListener('click', scrollTop);
