@@ -1,4 +1,8 @@
 const cards = document.querySelectorAll('#example-card');
+const examplesLink = document.getElementById('examplesLink');
+const examples = document.getElementById('examples');
+
+examplesLink.addEventListener('click', scrollToExamples);
 
 function is_touch_device4() {
     
@@ -25,3 +29,9 @@ window.addEventListener("load", function(){
     });
   }
 });
+
+function scrollToExamples() {
+  examples.scrollIntoView({
+    behavior: 'smooth'
+  });
+}

@@ -3,8 +3,6 @@ const nav = document.getElementById("nav");
 const year = document.getElementById('year');
 const scrollBtn = document.getElementById('scrollBtn');
 const rootElement = document.documentElement;
-const examplesBtn = document.getElementById('examplesBtn');
-const examples = document.getElementById('examplesDD');
 
 navBtn.addEventListener("click", toggleNav);
 scrollBtn.addEventListener('click', scrollTop);
@@ -27,14 +25,6 @@ function handleScroll() {
     scrollBtn.style.opacity = '0';
     scrollBtn.style.pointerEvents = 'none';
   }
-}
-
-function scrollToExamples() {
-  console.log('clicked'
-  );
-  examples.scrollIntoView({
-    behavior: 'smooth'
-  });
 }
 
 function scrollTop() {

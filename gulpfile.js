@@ -31,6 +31,10 @@ const paths = {
   icons: {
     src: "./src/images/icons/*.svg",
     dest: "./dist/images/icons/"
+  },
+  html: {
+    src: "./src/*.html",
+    dest: "./dist/"
   }
 };
 
@@ -99,6 +103,13 @@ async function runServer(done) {
         liveReload.reload();
       }, 1000);
     }
+  );
+}
+
+function html() {
+  return( gulp
+    .src(paths.html.src)
+    .pipe(gulp.dest(paths.html.dest))
   );
 }
 
