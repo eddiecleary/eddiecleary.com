@@ -3,12 +3,13 @@ const nav = document.getElementById("nav");
 const year = document.getElementById('year');
 const scrollBtn = document.getElementById('scrollBtn');
 const rootElement = document.documentElement;
-const examplesBtn = document.getElementById('examplesBtn');
+const examplesLink = document.getElementById('examplesLink');
 const examples = document.getElementById('examples');
 
 navBtn.addEventListener("click", toggleNav);
 scrollBtn.addEventListener('click', scrollTop);
 document.addEventListener('scroll', handleScroll);
+examplesLink.addEventListener('click', scrollToExamples);
 
 year.textContent = new Date().getFullYear();
 
