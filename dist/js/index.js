@@ -31,8 +31,8 @@ function handleScroll() {
 }
 
 function scrollToExamples() {
-  console.log('clicked'
-  );
+  console.log('clicked');
+  
   examples.scrollIntoView({
     behavior: 'smooth'
   });
