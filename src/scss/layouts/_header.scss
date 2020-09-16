@@ -46,7 +46,7 @@ header.header {
       transition: max-height 0.25s ease-out;
 
       &.expanded {
-        max-height: 90px;
+        max-height: 170px;
         margin-bottom: 20px;
       }
 
@@ -80,11 +80,10 @@ header.header {
         }
 
         li {
-          background-color: $tertiary;
           width: 100%;
-          padding: 10px 0;
           display: flex;
           justify-content: center;
+          overflow: hidden;
 
           @media (min-width: 768px) {
             background-color: transparent;
@@ -98,6 +97,21 @@ header.header {
           a {
             display: flex;
             align-items: center;
+            width: 100%;
+            justify-content: center;
+            padding: 1rem 0;
+            background-color: $tertiary;
+
+
+            &:active {
+              background-color: $secondary;
+              color: $tertiary;
+              font-weight: bold;
+
+              svg {
+                fill: $tertiary;
+              }
+            }
 
             @media (min-width: 768px) {
               color: $black;

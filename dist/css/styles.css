@@ -310,7 +310,7 @@ header.header .container .nav {
 }
 
 header.header .container .nav.expanded {
-  max-height: 90px;
+  max-height: 170px;
   margin-bottom: 20px;
 }
 
@@ -362,15 +362,14 @@ header.header .container .nav ul > :last-child {
 }
 
 header.header .container .nav ul li {
-  background-color: #2200b8;
   width: 100%;
-  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -390,6 +389,22 @@ header.header .container .nav ul li a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: #2200b8;
+}
+
+header.header .container .nav ul li a:active {
+  background-color: #ffd700;
+  color: #2200b8;
+  font-weight: bold;
+}
+
+header.header .container .nav ul li a:active svg {
+  fill: #2200b8;
 }
 
 @media (min-width: 768px) {
