@@ -133,10 +133,11 @@ function watchTask() {
   gulp.watch(paths.images.src, imgmin);
   gulp.watch(paths.views.src, views);
   gulp.watch(paths.icons.src, icons);
+  gulp.watch(paths.html.src, html);
 }
 
 const dev = gulp.parallel([runServer, watchTask]);
-const build = gulp.series([icons, imgmin, scripts, styles]);
+const build = gulp.series([icons, imgmin, scripts, styles, html]);
 
 exports.imgmin = imgmin;
 exports.build = build;
