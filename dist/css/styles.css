@@ -722,6 +722,7 @@ section.hero img {
   margin: 0 auto;
   width: 100%;
   max-width: 385px;
+  min-height: 285px;
 }
 
 @media (min-width: 768px) {
@@ -730,6 +731,7 @@ section.hero img {
     max-height: 650px;
     -o-object-fit: cover;
     object-fit: cover;
+    min-height: 574px;
   }
 }
 
