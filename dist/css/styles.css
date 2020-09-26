@@ -751,6 +751,10 @@ section.hero img {
   }
 }
 
+section.hero .container .hero-wrap {
+  max-width: 100%;
+}
+
 @media (min-width: 768px) {
   section.hero .container .hero-wrap {
     display: -webkit-box;
@@ -769,6 +773,7 @@ section.hero img {
     transform: translateY(-50%);
     width: 100%;
     bottom: 30px;
+    max-width: 50%;
   }
 }
 
