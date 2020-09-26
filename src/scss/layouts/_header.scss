@@ -25,6 +25,7 @@ header.header {
       .logo {
         width: 170px;
         margin-top: 10px;
+        z-index: 50;
 
         @media (min-width: 480px) {
           width: 190px;
