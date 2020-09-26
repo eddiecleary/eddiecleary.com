@@ -86,6 +86,6 @@ app.post("/contact", async (req, res) => {
     });
 });
 
-app.listen(32000, () => {
-  console.log("Server started for eddiecleary.com @ port 32000");
-});
+// app.listen(32000, () => {
+//   console.log("Server started for eddiecleary.com @ port 32000");
+// });
