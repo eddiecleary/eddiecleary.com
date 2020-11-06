@@ -1,7 +1,7 @@
 header.header {
   font-size: 1rem;
   width: 100%;
-  
+
   &.index {
     @media (min-width: 768px) {
       position: absolute;
@@ -23,16 +23,16 @@ header.header {
     .logo-wrap {
 
       .logo {
-        width: 170px;
+        width: 130px;
         margin-top: 10px;
         z-index: 50;
 
         @media (min-width: 480px) {
-          width: 190px;
+          width: 200px;
         }
 
         @media (min-width: 768px) {
-          width: 220px;
+          width: 300px;
         }
       }
     }
@@ -173,12 +173,12 @@ header.header {
         &:hover {
           opacity: 0.7;
         }
-  
+
         &.is-active {
           &:hover {
             opacity: 0.7;
           }
-  
+
           .hamburger-inner,
           .hamburger-inner::before,
           .hamburger-inner::after {
@@ -189,12 +189,12 @@ header.header {
         &.is-active {
           .hamburger-inner {
             transform: translate3d(0, 10px, 0) rotate(45deg);
-  
+
             &::before {
               transform: rotate(-45deg) translate3d(-5.7px, -6px, 0);
               opacity: 0;
             }
-  
+
             &::after {
               transform: translate3d(0, -20px, 0) rotate(-90deg);
             }
@@ -243,7 +243,7 @@ header.header {
             top: 20px;
             bottom: -24px;
           }
-        }    
+        }
       }
     }
   }

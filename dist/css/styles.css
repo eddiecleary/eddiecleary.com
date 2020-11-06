@@ -274,20 +274,20 @@ header.header .container {
 }
 
 header.header .container .logo-wrap .logo {
-  width: 170px;
+  width: 130px;
   margin-top: 10px;
   z-index: 50;
 }
 
 @media (min-width: 480px) {
   header.header .container .logo-wrap .logo {
-    width: 190px;
+    width: 200px;
   }
 }
 
 @media (min-width: 768px) {
   header.header .container .logo-wrap .logo {
-    width: 220px;
+    width: 300px;
   }
 }
 

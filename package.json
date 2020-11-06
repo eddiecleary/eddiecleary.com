@@ -21,7 +21,7 @@
     "express-session": "^1.17.1",
     "gulp-ejs": "^5.1.0",
     "helmet": "^4.1.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nodemailer": "^6.4.10",
     "querystring": "^0.2.0",
     "request": "^2.88.2"
