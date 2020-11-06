@@ -21,7 +21,7 @@ section.about {
           width: 100%;
         }
       }
-    
+
       figcaption {
         position: relative;
         text-align: left;
@@ -67,14 +67,14 @@ section.about {
 }
 
 section.contact-form {
-  margin-top: 5.5em;
+  margin-top: 2.5em;
 
   @media (min-width: 992px) {
-    margin-top: 6.5em;
+    margin-top: 2.5em;
   }
 
   .container {
-    
+
     max-width: 550px;
 
     .form {
@@ -184,7 +184,7 @@ section.contact-form {
             }
           }
         }
-      }     
+      }
 
       .g-recaptcha {
         margin-top: 0.5em;

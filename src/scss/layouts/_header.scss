@@ -23,7 +23,7 @@ header.header {
     .logo-wrap {
 
       .logo {
-        width: 130px;
+        width: 180px;
         margin-top: 10px;
         z-index: 50;
 
@@ -65,13 +65,17 @@ header.header {
         padding-bottom: 30px;
 
         & > :first-child {
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
+          @media (max-width: 767px) {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+          }
         }
 
         & > :last-child {
-          border-bottom-left-radius: 15px;
-          border-bottom-right-radius: 15px;
+          @media(max-width: 767px) {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+          }
         }
 
         @media (min-width: 768px) {

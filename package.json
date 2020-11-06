@@ -1,7 +1,7 @@
 {
-  "name": "eddiecleary",
+  "name": "skywarddesigns",
   "version": "1.0.0",
-  "description": "Portfolio Website for Eddie Cleary | Freelance Web Developer",
+  "description": "Skyward Designs specializes in creating author websites.",
   "main": "app.js",
   "scripts": {
     "start": "npm run watch-code & npm run watch-css",
