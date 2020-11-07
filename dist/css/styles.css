@@ -1263,74 +1263,6 @@ section.cta .container .wrapper a:hover svg {
   }
 }
 
-section.about {
-  margin-top: 3em;
-}
-
-@media (min-width: 992px) {
-  section.about {
-    margin-top: 3em;
-  }
-}
-
-section.about .container figure {
-  margin: 0;
-}
-
-section.about .container figure picture img {
-  max-width: 25em;
-  width: 100%;
-}
-
-section.about .container figure figcaption {
-  position: relative;
-  text-align: left;
-  padding-left: 1em;
-  margin-top: 0.6em;
-}
-
-@media (min-width: 480px) {
-  section.about .container figure figcaption {
-    margin-top: 1.2em;
-  }
-}
-
-@media (min-width: 480px) {
-  section.about .container figure figcaption {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 25em;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-}
-
-section.about .container figure figcaption::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 0.3em;
-  background-color: #ffd700;
-  bottom: 0;
-  top: 0;
-}
-
-@media (min-width: 480px) {
-  section.about .container figure figcaption::before {
-    width: 96%;
-    height: 0.15em;
-    top: initial;
-    bottom: -0.6em;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 section.contact-form {
   margin-top: 2.5em;
 }
@@ -1345,6 +1277,22 @@ section.contact-form .container {
   max-width: 550px;
 }
 
+section.contact-form .container .heading {
+  margin-bottom: 0;
+}
+
+section.contact-form .container .heading .title {
+  display: inline-block;
+}
+
+section.contact-form .container .heading .title svg {
+  position: static;
+}
+
+section.contact-form .container .heading p {
+  margin: 2em 0;
+}
+
 section.contact-form .container .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1354,7 +1302,6 @@ section.contact-form .container .form {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 2em;
 }
 
 section.contact-form .container .form button {
@@ -1438,37 +1385,6 @@ section.contact-form .container .form .field.field-100 textarea:focus {
   outline: none;
 }
 
-section.contact-form .container .form .g-recaptcha {
-  margin-top: 0.5em;
-}
-
-section.booking {
-  margin-top: 3em;
-  margin-bottom: 8em;
-}
-
-section.booking .container {
-  max-width: 650px;
-}
-
-section.booking .container .or {
-  font-size: 2.5em;
-  color: #ffd700;
-  display: block;
-  margin-bottom: 1.5em;
-}
-
-section.booking .container .calendly-inline-widget {
-  margin-top: 2em;
-  overflow: hidden;
-  min-width: 320px;
-  height: 900px;
-  margin-bottom: -100px;
-  z-index: 1;
-}
-
-@media (min-width: 768px) {
-  section.booking .container .calendly-inline-widget {
-    margin-bottom: -50px;
-  }
+section.contact-form .container .form .recipe {
+  display: none !important;
 }
