@@ -302,7 +302,12 @@
           </svg>
         </div>
         <!-- action="/contact" id="emailForm"-->
-        <form class="form" method="post" name="contact" data-netlify-recaptcha="true" data-netlify="true">
+        <form class="form" method="post" name="contact" netlify-honeypot="recipe" data-netlify="true">
+          <div class="recipe">
+            <label>
+              <input type="text" name="recipe" />
+            </label>
+          </div>
           <div class="field field-50">
             <label for="name">Name: </label>
             <input type="text" id="name" name="name" value="">
@@ -317,7 +322,7 @@
           </div>
           <!-- <div class="g-recaptcha" data-sitekey="6LfpZrUZAAAAAPCyPkdtd4es1c6XgDoxttAetTzd" id="captcha"></div> -->
           <br />
-          <div data-netlify-recaptcha="true"></div>
+          <!-- <div data-netlify-recaptcha="true"></div> -->
           <!-- <input type="hidden" id="csrf" name="_csrf" value="n76cOvQw-RQHvw9GhDQgB6sV6JPa92Q9lzns"> -->
           <button type="submit" id="emailBtn" class="btn">Send</button>
         </form>
