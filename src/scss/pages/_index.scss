@@ -125,11 +125,19 @@ section.examples {
       border-radius: 1em;
       padding: 2em;
       border: 3px solid $tertiary;
-      max-width: 415px;
       margin-left: auto;
       margin-right: auto;
+      max-width: 418px;
+      transform: scale(0.85);
+
+      @media (min-width: 768px) {
+        min-width: 418px;
+      }
 
       @media (min-width: 992px) {
+        padding: 1.5em;
+        flex-basis: 32%;
+        max-width: initial;
         &:hover {
           border: 3px solid $secondary;
           scale: (1.05);
@@ -146,7 +154,7 @@ section.examples {
       }
 
       @media (min-width: 1200px) {
-        flex-basis: 450px;
+
       }
 
       .overlay {
@@ -165,7 +173,7 @@ section.examples {
       img {
         width: 100%;
         max-width: 310px;
-        height: 200px;
+        height: auto;
 
         img.skinny {
           max-width: 290px;
@@ -225,6 +233,15 @@ section.steps {
 
     ol {
       margin-top: 3em;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media (min-width: 992px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
 
       li {
         border: .1em solid $secondary;
