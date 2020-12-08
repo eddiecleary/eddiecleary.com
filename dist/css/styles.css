@@ -620,6 +620,9 @@ header.header .container .nav .hamburger-inner::after {
 @media (min-width: 992px) {
   .footer .container ul li:first-of-type {
     margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
